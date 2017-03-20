@@ -1,0 +1,61 @@
+
+class CategoryB
+    attr_reader :type1, :location1, :price1
+    def initialize(type1, location1, price1)
+        @type1 = type1
+        @location1 = location1
+        @price1 = price1
+    end
+    
+    def to_s
+        puts "B category automobiles: "
+        puts "Type:         #{type1}" 
+        puts "Location:     #{location1}"
+        puts "Price [USD]:  #{price1}"
+    end
+    
+taxi = CategoryB.new('Taxi', 'NY', 20000)
+taxi.to_s
+end
+
+class CategoryC
+    attr_reader :type2, :location2, :price2
+    def initialize(type2, location2, price2)
+        @type2 = type2
+        @location2 = location2
+        @price2 = price2
+    end
+    def to_s
+        puts ""
+        puts "C category automobiles: "
+        puts "Type:         #{type2}"
+        puts "Location:     #{location2}"
+        puts "Price [USD]:  #{price2}"
+    end
+
+truck = CategoryC.new('Truck', 'LA', 80000)
+truck.to_s
+end  
+
+price1 = 20000
+price2 = 80000
+
+print "Enter discount: "
+discount = gets.chomp.to_i
+
+discounted = price1 - discount
+raised = price1 + discount 
+
+
+def compare(price1, price2)
+    if price1 < price2
+        puts "NY taxi is cheaper than LA truck"
+    elsif price1 > price2
+        puts "NY taxi is more expensive than other"
+    else
+        puts "These automobiles' prices are the same"
+    end
+end
+compare(price1, price2)
+puts "NY taxi discounted price is: $#{discounted}"
+puts "NY taxi raised price is: $#{raised}"
