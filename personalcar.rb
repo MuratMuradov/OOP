@@ -48,5 +48,5 @@ personalCar.km = 55000
 puts person.info
 puts personalCar.properties
 
-
+ 
 
