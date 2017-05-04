@@ -29,7 +29,7 @@ def initialize(brand, number)
     @brand, @number = brand, number
 end
 
-def properties 
+def properties  
 <<-PROP 
 
     Car properties:
